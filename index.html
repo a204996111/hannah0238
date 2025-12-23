@@ -3,72 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah Nail - 東港美甲工作室</title>
+    <title>Hannah Nail 漢娜美甲 | 東港美甲工作室</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         :root {
-            --primary-color: #f8d7da; /* 溫柔的粉色調 */
+            --primary-color: #f8d7da;
             --text-color: #4a4a4a;
             --accent-color: #d4a373;
+            --bg-color: #fdfaf9;
         }
-        body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; margin: 0; color: var(--text-color); line-height: 1.6; }
-        header { background: #fff; padding: 50px 20px; text-align: center; border-bottom: 1px solid #eee; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        h1 { letter-spacing: 3px; color: var(--accent-color); }
-        .ig-link { color: #8a3ab9; text-decoration: none; font-weight: bold; }
+        body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; margin: 0; color: var(--text-color); line-height: 1.6; background-color: #fff; }
+        header { background: #fff; padding: 50px 20px 20px; text-align: center; }
+        .container { max-width: 800px; margin: auto; padding: 0 20px 50px; }
         
-        /* 價目表樣式 */
-        .price-card { background: #fdfaf9; border-radius: 15px; padding: 25px; margin: 20px 0; border-left: 5px solid var(--primary-color); }
-        .promo { color: #e63946; font-weight: bold; }
-
-        /* 按鈕樣式 */
-        .btn { display: block; background: var(--accent-color); color: white; text-align: center; padding: 15px; 
-               text-decoration: none; border-radius: 30px; margin: 30px 0; font-size: 1.2rem; transition: 0.3s; }
-        .btn:hover { background: #bc8a5f; }
-
-        /* 圖片區塊 */
-        .gallery-preview { text-align: center; padding: 20px; background: #eee; border-radius: 10px; margin: 20px 0; }
+        h1 { font-size: 2.2rem; letter-spacing: 5px; color: var(--accent-color); margin: 0; }
+        .sub-header { font-size: 0.95rem; color: #888; margin: 10px 0 15px; letter-spacing: 1px; }
+        .ig-id { color: #8a3ab9; text-decoration: none; font-weight: bold; border-bottom: 1px solid #8a3ab9; }
         
-        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #999; }
+        section { margin-top: 40px; }
+        h2 { font-size: 1.2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; margin-bottom: 20px; }
+        
+        /* 輪播圖樣式 */
+        .swiper { width: 100%; height: 450px; border-radius: 15px; background: #eee; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* 價格卡片 */
+        .price-card { background: var(--bg-color); border-radius: 20px; padding: 25px; border: 1px solid #eee; }
+        .price-main { display: flex; justify-content: space-between; align-items: center; font-size: 1.5rem; font-weight: bold; }
+        .price-detail { font-size: 0.95rem; color: #666; margin: 15px 0; line-height: 1.8; }
+        .promo-box { background: #fff1f2; color: #e63946; padding: 15px; border-radius: 12px; font-weight: bold; border: 1px dashed #ffb1b8; text-align: center; }
+        .promo-highlight { font-size: 1.4rem; text-decoration: underline; }
+
+        /* 預約按鈕區 */
+        .booking-group { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+        .btn { display: block; text-align: center; padding: 16px; text-decoration: none; border-radius: 50px; font-size: 1.1rem; font-weight: bold; transition: 0.3s; }
+        .btn-line { background: #06c755; color: white; }
+        .btn-ig { background: #8a3ab9; color: white; }
+        .btn-form { background: var(--accent-color); color: white; }
+        .btn:hover { opacity: 0.8; transform: scale(1.02); }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #bbb; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>HANNAH NAIL</h1>
-    <p>東港美甲工作室｜精緻手作｜質感設計</p>
-    <a href="https://www.instagram.com/hannah_0238" class="ig-link">IG: hannah_0238</a>
+    <h1>Hannah Nail</h1>
+    <div class="sub-header">東港美甲工作室 | 東港美甲推薦 | 便宜美甲</div>
+    <a href="https://www.instagram.com/hannah_0238" class="ig-id">IG: hannah_0238</a>
 </header>
 
 <div class="container">
     <section>
+        <h2>📸 作品參考</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="1.jpg" alt="作品1"></div>
+                <div class="swiper-slide"><img src="2.jpg" alt="作品2"></div>
+                <div class="swiper-slide"><img src="3.jpg" alt="作品3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div style="margin-top:15px;">
+            <a href="https://www.instagram.com/hannah_0238" class="btn btn-ig">前往 IG 查看更多作品</a>
+        </div>
+    </section>
+
+    <section>
         <h2>✨ 新人作品集募集優惠</h2>
         <div class="price-card">
-            <h3>不限款式光療 <span style="float:right;">$600</span></h3>
-            <p>包含基礎保養（卸甲另加 $100）</p>
-            <p class="promo">📢 IG 公開分享回饋：現折 $100！</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>📍 地點與時間</h2>
-        <p>工作室位置：屏東縣東港鎮（7-11 大鵬灣門市附近）</p>
-        <p>操作時間：約 3-4 小時（新手細心操作，請預留充足時間）</p>
-    </section>
-
-    <a href="YOUR_LINE_LINK_HERE" class="btn">立即私訊預約 (Line)</a>
-
-    <section>
-        <h2>📸 作品參考</h2>
-        <div class="gallery-preview">
-            <p>點擊下方按鈕前往 IG 查看最新作品集</p>
-            <a href="https://www.instagram.com/hannah_0238" class="btn" style="background: #8a3ab9;">查看作品集</a>
-        </div>
-    </section>
-</div>
-
-<footer>
-    &copy; 2024 Hannah Nail Studio. All Rights Reserved.
-</footer>
-
-</body>
-</html>
+            <div class="price-main">
+                <span>不限款式光療</span>
+                <span style="color: var(--accent-color);">$600</span>
+            </div>
+            <div class="price-detail">
+                • ⚠️ <strong>不能延甲</strong><br>
