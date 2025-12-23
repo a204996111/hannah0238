@@ -22,7 +22,7 @@
         .price-card { background: #fdfaf9; border-radius: 15px; padding: 25px; margin: 20px 0; border-left: 5px solid var(--primary-color); }
         .promo { color: #e63946; font-weight: bold; margin-top: 10px; border-top: 1px dashed #f8d7da; padding-top: 10px; }
 
-        /* 預約小告示樣式 (新增) */
+        /* 預約小告示樣式 */
         .booking-notice { 
             background-color: #fff3cd; 
             border: 1px solid #ffeeba; 
@@ -100,20 +100,20 @@
         <h2>📸 作品參考</h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="1.jpg" alt="作品1" loading="lazy"></div>
-                <div class="swiper-slide"><img src="2.jpg" alt="作品2" loading="lazy"></div>
-                <div class="swiper-slide"><img src="3.jpg" alt="作品3" loading="lazy"></div>
-                <div class="swiper-slide"><img src="4.jpg" alt="作品4" loading="lazy"></div>
-                <div class="swiper-slide"><img src="5.jpg" alt="作品5" loading="lazy"></div>
-                <div class="swiper-slide"><img src="6.jpg" alt="作品6" loading="lazy"></div>
-                <div class="swiper-slide"><img src="7.jpg" alt="作品7" loading="lazy"></div>
-                <div class="swiper-slide"><img src="8.jpg" alt="作品8" loading="lazy"></div>
-                <div class="swiper-slide"><img src="9.jpg" alt="作品9" loading="lazy"></div>
-                <div class="swiper-slide"><img src="10.jpg" alt="作品10" loading="lazy"></div>
-                <div class="swiper-slide"><img src="11.jpg" alt="作品11" loading="lazy"></div>
-                <div class="swiper-slide"><img src="12.jpg" alt="作品12" loading="lazy"></div>
-                <div class="swiper-slide"><img src="13.jpg" alt="作品13" loading="lazy"></div>
-                <div class="swiper-slide"><img src="14.jpg" alt="作品14" loading="lazy"></div>
+                <div class="swiper-slide"><img src="1.jpg" alt="作品1"></div>
+                <div class="swiper-slide"><img src="2.jpg" alt="作品2"></div>
+                <div class="swiper-slide"><img src="3.jpg" alt="作品3"></div>
+                <div class="swiper-slide"><img src="4.jpg" alt="作品4"></div>
+                <div class="swiper-slide"><img src="5.jpg" alt="作品5"></div>
+                <div class="swiper-slide"><img src="6.jpg" alt="作品6"></div>
+                <div class="swiper-slide"><img src="7.jpg" alt="作品7"></div>
+                <div class="swiper-slide"><img src="8.jpg" alt="作品8"></div>
+                <div class="swiper-slide"><img src="9.jpg" alt="作品9"></div>
+                <div class="swiper-slide"><img src="10.jpg" alt="作品10"></div>
+                <div class="swiper-slide"><img src="11.jpg" alt="作品11"></div>
+                <div class="swiper-slide"><img src="12.jpg" alt="作品12"></div>
+                <div class="swiper-slide"><img src="13.jpg" alt="作品13"></div>
+                <div class="swiper-slide"><img src="14.jpg" alt="作品14"></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -137,7 +137,6 @@
 
     // 預約表單彈窗設定
     function showFormAlert() {
-        // 設定彈窗文字內容
         var message = "【 預約表單填寫須知 】\n\n" +
                       "1. 測試中，預約完成請務必「截圖私訊」！\n\n" +
                       "2. 時段目前僅分「上午」或「下午」：\n" +
@@ -146,7 +145,6 @@
                       "   (詳細時間請私訊確認，表單時間僅供參考)\n\n" +
                       "按「確定」前往填寫";
         
-        // 跳出確認視窗，如果使用者按確定，才開啟連結
         if (confirm(message)) {
             window.open('https://reurl.cc/8b9E5g', '_blank');
         }
