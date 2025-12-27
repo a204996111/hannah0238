@@ -40,32 +40,26 @@
         .btn { display: block; background: var(--accent-color); color: white; text-align: center; padding: 15px; 
                text-decoration: none; border-radius: 30px; font-size: 1.1rem; transition: 0.3s; font-weight: bold; cursor: pointer;}
         
-        /* 地圖按鈕樣式 (新增) */
+        /* 地圖按鈕樣式 */
         .map-btn {
-            display: inline-block;
-            margin-top: 8px;
-            color: #d4a373;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #d4a373;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: 0.3s;
+            display: inline-block; margin-top: 8px; color: #d4a373; text-decoration: none; font-weight: bold;
+            border: 1px solid #d4a373; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; transition: 0.3s;
         }
         .map-btn:hover { background-color: #d4a373; color: white; }
 
         /* 不同按鈕的顏色 */
-        .btn-line { background: #06c755; } /* Line 綠色 */
-        .btn-ig { background: #8a3ab9; }   /* IG 紫色 */
-        .btn-form { background: #d4a373; } /* 表單 金色 */
-
+        .btn-line { background: #06c755; }
+        .btn-ig { background: #8a3ab9; }
+        .btn-form { background: #d4a373; }
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
         /* 輪播圖區塊 */
         .swiper { width: 100%; aspect-ratio: 1/1; border-radius: 15px; margin-top: 20px; background: #eee; }
         .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
         
+        /* 工作室環境照樣式 (新增) */
+        .studio-img { width: 100%; border-radius: 15px; margin-top: 15px; border: 1px solid #eee; }
+
         footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #999; }
     </style>
 </head>
@@ -73,7 +67,7 @@
 
 <header>
     <h1>東港美甲工作室</h1>
-    <div class="sub-header">東港美甲 | 東港美甲推薦 | 平價美甲</div>
+    <div class="sub-header">東港美甲 | 東港美甲推薦 | 便宜美甲</div>
     <a href="https://www.instagram.com/hannah_0238" class="ig-link">IG: hannah_0238</a>
 </header>
 
@@ -89,10 +83,13 @@
     </section>
 
     <section>
-        <h2>📍 地點與時間</h2>
+        <h2>📍 地點與環境</h2>
         <p>工作室位置：屏東縣東港鎮（7-11 大鵬灣門市附近）</p>
         <a href="https://maps.app.goo.gl/zBrmYfhADeaq59h39" target="_blank" class="map-btn">🗺️ 開啟 Google Maps 導航</a>
         
+        <img src="studio.jpg" alt="工作室環境" class="studio-img">
+        <p style="font-size:0.85rem; color:#888; text-align:center; margin-top:5px;">( 溫馨居家工作室，採完全預約制 )</p>
+
         <p style="margin-top: 15px;">操作時間：約 3-4 小時（新手細心操作，請預留充足時間）</p>
     </section>
 
@@ -103,12 +100,11 @@
             <strong>💡 預約時請主動告知：</strong>
             (1) 預約日期<br>
             (2) 上午或下午時段<br>
-            ⚠️時段可參考預約表單(若無顯示時段，表示該時段已有人預約)<br>
             (3) 有沒有需要卸甲
         </div>
 
         <div class="booking-group">
-            <a href="https://line.me/ti/p/S4GCwGosOO" class="btn btn-line">1. Line 預約</a>
+            <a href="https://line.me/ti/p/A0bpLHv0Ev" class="btn btn-line">1. Line 預約</a>
             <a href="https://www.instagram.com/hannah_0238" class="btn btn-ig">2. IG 私訊預約</a>
             <a onclick="showFormAlert()" class="btn btn-form">3. 填寫預約表單</a>
         </div>
@@ -141,19 +137,17 @@
 </div>
 
 <footer>
-    &copy; 2025 Hannah Nail Studio. All Rights Reserved.
+    © 2025 Hannah Nail Studio. All Rights Reserved.
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    // 輪播圖設定
     var swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: { delay: 3000, disableOnInteraction: false },
         pagination: { el: ".swiper-pagination", clickable: true },
     });
 
-    // 預約表單彈窗設定
     function showFormAlert() {
         var message = "【 預約表單填寫須知 】\n\n" +
                       "1. 測試中，預約完成請務必「截圖私訊」！\n\n" +
@@ -171,7 +165,3 @@
 
 </body>
 </html>
-
-
-
-
