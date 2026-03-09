@@ -108,8 +108,7 @@
 
         .btn-line { background: #06c755; }
         .btn-ig { background: #8a3ab9; }
-        .btn-form { background: #d4a373; }
-        .btn-phone { background: var(--rose-gold); } /* 新增：電話按鈕樣式 (玫瑰金) */
+        .btn-phone { background: var(--rose-gold); }
         
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
@@ -167,8 +166,7 @@
         <div class="booking-group">
             <a href="https://line.me/ti/p/S4GCwGosOO" class="btn btn-line">1. Line 預約</a>
             <a href="https://www.instagram.com/hannah_0238" class="btn btn-ig">2. IG 私訊預約</a>
-            <a onclick="showFormAlert()" class="btn btn-form">3. 填寫預約表單</a>
-            <a href="tel:0988582005" class="btn btn-phone">4. 直接來電：0988582005</a>
+            <a href="tel:0988582005" class="btn btn-phone">3. 直接來電：0988582005</a>
         </div>
     </section>
 
@@ -179,7 +177,7 @@
                 <div class="swiper-slide"><img src="hannah-cute-nail-design-16.jpg" alt="東港美甲建構"></div>
                 <div class="swiper-slide"><img src="donggang-nail-01.jpg" alt="東港美甲推薦-氣質光療款式"></div>
                 <div class="swiper-slide"><img src="donggang-gel-nail-02.jpg" alt="東港凝膠指甲-顯白設計"></div>
-                <div class="swiper-slide"><img src="pingtung-nail-art-03.jpg" alt="屏東美甲工作室-暈染風格"></div>
+                <div class="swiper-slide"><img src="pingtung-nail-art-03.jpg" alt="屏 গান্ধ美甲工作室-暈染風格"></div>
                 <div class="swiper-slide"><img src="hannah-nail-studio-04.jpg" alt="Hannah Nail-平價光療作品"></div>
                 <div class="swiper-slide"><img src="dapeng-bay-nail-05.jpg" alt="大鵬灣美甲-可愛手繪"></div>
                 <div class="swiper-slide"><img src="donggang-nail-design-06.jpg" alt="東港做指甲-貓眼光療"></div>
@@ -211,20 +209,6 @@
         autoplay: { delay: 3000, disableOnInteraction: false },
         pagination: { el: ".swiper-pagination", clickable: true },
     });
-
-    function showFormAlert() {
-        var message = "【 預約表單填寫須知 】\n\n" +
-                      "1. 測試中，預約完成請務必「截圖私訊」！\n\n" +
-                      "2. 時段目前僅分「上午」或「下午」：\n" +
-                      "   👉 選 09:00 代表 上午時段\n" +
-                      "   👉 選 14:00 代表 下午時段\n" +
-                      "   (詳細時間請私訊確認，表單時間僅供參考)\n\n" +
-                      "按「確定」前往填寫";
-        
-        if (confirm(message)) {
-            window.open('https://reurl.cc/8b9E5g', '_blank');
-        }
-    }
 </script>
 
 </body>
